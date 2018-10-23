@@ -12,6 +12,8 @@
 		097457AF1D2AF4E0000D9368 /* CRAWKWebView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 097457AC1D2A4595000D9368 /* CRAWKWebView.h */; };
 		097457B01D2AF4E0000D9368 /* CRAWKWebViewManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 097457A81D2A457C000D9368 /* CRAWKWebViewManager.h */; };
 		3E609CF61EAA815D00187C8C /* WeakScriptMessageDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E609CF51EAA815D00187C8C /* WeakScriptMessageDelegate.m */; };
+		AB4CA5A5217E069A004B4582 /* WKCookieWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4CA5A4217E0699004B4582 /* WKCookieWebView.swift */; };
+		AB8D5A30217DF1BE00D2450C /* WKCookieWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D5A2F217DF1BE00D2450C /* WKCookieWebView.m */; };
 		E683F3D72080F3400005F1F5 /* WKProcessPool+SharedProcessPool.m in Sources */ = {isa = PBXBuildFile; fileRef = E683F3D62080F3400005F1F5 /* WKProcessPool+SharedProcessPool.m */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,10 @@
 		097457AD1D2A4595000D9368 /* CRAWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.objc; path = CRAWKWebView.m; sourceTree = "<group>"; tabWidth = 2; };
 		3E609CF41EAA815D00187C8C /* WeakScriptMessageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeakScriptMessageDelegate.h; sourceTree = "<group>"; };
 		3E609CF51EAA815D00187C8C /* WeakScriptMessageDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeakScriptMessageDelegate.m; sourceTree = "<group>"; };
+		AB4CA5A3217E025D004B4582 /* WKCookieWebView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKCookieWebView.h; sourceTree = "<group>"; };
+		AB4CA5A4217E0699004B4582 /* WKCookieWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCookieWebView.swift; sourceTree = "<group>"; };
+		AB8D5A2C217DF15C00D2450C /* RCTWKWebView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RCTWKWebView-Bridging-Header.h"; sourceTree = "<group>"; };
+		AB8D5A2F217DF1BE00D2450C /* WKCookieWebView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKCookieWebView.m; sourceTree = "<group>"; };
 		E683F3D32080F2E10005F1F5 /* WKProcessPool+SharedProcessPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WKProcessPool+SharedProcessPool.h"; sourceTree = "<group>"; };
 		E683F3D62080F3400005F1F5 /* WKProcessPool+SharedProcessPool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "WKProcessPool+SharedProcessPool.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +77,9 @@
 		0974579C1D2A440A000D9368 /* RCTWKWebView */ = {
 			isa = PBXGroup;
 			children = (
+				AB4CA5A4217E0699004B4582 /* WKCookieWebView.swift */,
+				AB8D5A2F217DF1BE00D2450C /* WKCookieWebView.m */,
+				AB4CA5A3217E025D004B4582 /* WKCookieWebView.h */,
 				097457AC1D2A4595000D9368 /* CRAWKWebView.h */,
 				097457AD1D2A4595000D9368 /* CRAWKWebView.m */,
 				097457A81D2A457C000D9368 /* CRAWKWebViewManager.h */,
@@ -79,6 +88,7 @@
 				3E609CF51EAA815D00187C8C /* WeakScriptMessageDelegate.m */,
 				E683F3D32080F2E10005F1F5 /* WKProcessPool+SharedProcessPool.h */,
 				E683F3D62080F3400005F1F5 /* WKProcessPool+SharedProcessPool.m */,
+				AB8D5A2C217DF15C00D2450C /* RCTWKWebView-Bridging-Header.h */,
 			);
 			path = RCTWKWebView;
 			sourceTree = "<group>";
@@ -113,6 +123,7 @@
 				TargetAttributes = {
 					097457991D2A440A000D9368 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -138,10 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB8D5A30217DF1BE00D2450C /* WKCookieWebView.m in Sources */,
 				097457AB1D2A457C000D9368 /* CRAWKWebViewManager.m in Sources */,
 				3E609CF61EAA815D00187C8C /* WeakScriptMessageDelegate.m in Sources */,
 				E683F3D72080F3400005F1F5 /* WKProcessPool+SharedProcessPool.m in Sources */,
 				097457AE1D2A4595000D9368 /* CRAWKWebView.m in Sources */,
+				AB4CA5A5217E069A004B4582 /* WKCookieWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +189,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -192,9 +206,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = RCTWKWebView;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -227,6 +242,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -237,8 +253,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = RCTWKWebView;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -247,6 +264,7 @@
 		097457A41D2A440A000D9368 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../React/**",
 					"$(inherited)",
@@ -254,15 +272,20 @@
 					"$(SRCROOT)/../react-native/React/**",
 					"$(SRCROOT)/../../../node_modules/react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RCTWKWebView/RCTWKWebView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		097457A51D2A440A000D9368 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../../React/**",
 					"$(inherited)",
@@ -270,9 +293,12 @@
 					"$(SRCROOT)/../react-native/React/**",
 					"$(SRCROOT)/../../../node_modules/react-native/React/**",
 				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RCTWKWebView/RCTWKWebView-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

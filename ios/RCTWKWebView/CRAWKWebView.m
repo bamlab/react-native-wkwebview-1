@@ -1,6 +1,8 @@
 #import "CRAWKWebView.h"
 
+#import "RCTWKWebView-Swift.h"
 #import "WeakScriptMessageDelegate.h"
+#import "WKCookieWebView.h"
 
 #import <UIKit/UIKit.h>
 
@@ -42,7 +44,7 @@
 
 @implementation CRAWKWebView
 {
-  WKWebView *_webView;
+  WKCookieWebView *_webView;
   BOOL _injectJavaScriptForMainFrameOnly;
   BOOL _injectedJavaScriptForMainFrameOnly;
   NSString *_injectJavaScript;
@@ -70,7 +72,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
     [userController addScriptMessageHandler:[[WeakScriptMessageDelegate alloc] initWithDelegate:self] name:@"reactNative"];
     config.userContentController = userController;
     
-    _webView = [[WKWebView alloc] initWithFrame:self.bounds configuration:config];
+    _webView = [[WKCookieWebView alloc] initWithFrame:self.bounds configuration:config];
     _webView.UIDelegate = self;
     _webView.navigationDelegate = self;
     _webView.scrollView.delegate = self;
